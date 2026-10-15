@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Domain não referencia NuGet nem outro projeto da solution. -->
+
+</Project>
