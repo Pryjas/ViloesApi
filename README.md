@@ -33,7 +33,13 @@ Erros: **400** campo ausente ou inválido · **404** registro não existe · **4
 Exemplo de corpo para `POST /api/viloes`:
 
 ```json
-{ "nome": "Darth Vader", "franquia": "Star Wars", "ator": "James Earl Jones", "ano": 1977, "maldade": 9.9 }
+{
+  "nome": "Darth Vader",
+  "franquia": "Star Wars",
+  "ator": "James Earl Jones",
+  "ano": 1977,
+  "maldade": 9.9
+}
 ```
 
 ## Arquitetura
@@ -60,5 +66,10 @@ WebAPI  →  Infra  →  Application  →  Domain
 5. O **UnitOfWork** grava no banco e a resposta volta no formato:
 
 ```json
-{ "data": ..., "succeeded": true, "errors": null, "message": "..." }
+{
+  "data": null,
+  "succeeded": true,
+  "errors": null,
+  "message": "Sua mensagem aqui"
+}
 ```
