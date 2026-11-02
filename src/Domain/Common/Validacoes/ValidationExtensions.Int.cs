@@ -1,8 +1,5 @@
 namespace ViloesApi.Domain.Common.Validacoes;
 
-/// <remarks>
-/// Valores nulos são ignorados; a obrigatoriedade é verificada com <c>NotNull</c>.
-/// </remarks>
 public static partial class ValidationExtensions
 {
     public static List<ValidacaoFalha> Id(

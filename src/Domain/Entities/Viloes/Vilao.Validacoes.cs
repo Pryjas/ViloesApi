@@ -75,6 +75,6 @@ public partial class Vilao
 
     private static List<ValidacaoFalha> MaldadeValida(decimal maldade)
         => Validacao.Init
-            .GreaterOrEqualsTo(maldade, 0m, nameof(Maldade))
+            .GreaterThan(maldade, 0m, nameof(Maldade))
             .LowerOrEqualsTo(maldade, 10m, nameof(Maldade));
 }

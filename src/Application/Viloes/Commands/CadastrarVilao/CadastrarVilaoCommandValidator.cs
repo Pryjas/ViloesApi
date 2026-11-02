@@ -1,8 +1,5 @@
 namespace ViloesApi.Application.Viloes.Commands.CadastrarVilao;
 
-/// <remarks>
-/// Garante que os campos esperados vieram na requisição. Tamanhos e faixas de valores são regras do domínio.
-/// </remarks>
 public class CadastrarVilaoCommandValidator : AbstractValidator<CadastrarVilaoCommand>
 {
     public CadastrarVilaoCommandValidator()
@@ -14,5 +11,7 @@ public class CadastrarVilaoCommandValidator : AbstractValidator<CadastrarVilaoCo
         RuleFor(c => c.Ator).NotEmpty();
 
         RuleFor(c => c.Ano).NotEmpty();
+        
+        RuleFor(c => c.Maldade).GreaterThan(0);
     }
 }

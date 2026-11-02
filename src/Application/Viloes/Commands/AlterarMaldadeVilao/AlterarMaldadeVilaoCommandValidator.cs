@@ -9,5 +9,7 @@ public class AlterarMaldadeVilaoCommandValidator : ValidatorBase<AlterarMaldadeV
         RuleFor(c => c.VilaoId)
             .Identificador()
             .MustExists(unitOfWork.GetRepository<Vilao>());
+        
+        RuleFor(c => c.Maldade).GreaterThan(0);
     }
 }
